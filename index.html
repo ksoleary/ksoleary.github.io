@@ -1,7 +1,92 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif; /* Adding a font for better readability */
+        }
+        .top-left-logo {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 2in;
+            height: 2in;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .top-left-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .name {
+            position: absolute;
+            margin-left: 100px;
+            margin-top: 320px; 
+            font-size: 20px; 
+            font-weight: bold; 
+        }
+        .title {
+            position: absolute;
+            margin-left: 100px;
+            margin-top: 350px; 
+            font-size: 16px; 
+        }
+        .bio-header {
+            position: absolute;
+            top: 120px;
+            left: 400px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .bio-text {
+            position: absolute;
+            top: 160px;
+            left: 400px;
+            font-size: 16px;
+        }
+        .Publications-header {
+            position: absolute;
+            top: 250px;
+            left: 400px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .Publications-text {
+            position: absolute;
+            top: 290px;
+            left: 400px;
+            font-size: 16px;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello</h1>
-<p>This page is a work in progress.</p>
+    <div class="top-left-logo">
+        <img src="images/headshot.jpeg" alt="Logo" />
+    </div>
+    <div class="name">
+        Kevin Sean O'Leary
+    </div>
+    <div class="title">
+        MD/PhD Candidate at Albert<br>Einstein College of Medicine
+    </div>
+    <div class="bio-header">
+        Bio
+    </div>
+    <div class="bio-text">
+        Hi! I'm a 4th year MD/PhD Candidate in the laboratory of Dr. Deyou Zheng. 
+        If you have any questions about the work listed <br>below, please email me at kevin.oleary@einsteinmed.edu!
+    </div>
+    <div class="Publications-header">
+        Published Work
+    </div>
+    <div class="Publications-text">
+        O’Leary, K., Zheng, D. Metacell-based differential expression analysis identifies cell type specific temporal gene response <br>programs in COVID-19 patient PBMCs. npj Syst Biol Appl 10, 36 (2024). https://doi.org/10.1038/s41540-024-00364-2
+    </div>
 </body>
 </html>
