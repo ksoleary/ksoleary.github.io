@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,110 +8,101 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif; /* Adding a font for better readability */
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
         }
         .top-left-logo {
-            position: absolute;
-            top: 100px;
-            left: 100px;
-            width: 2in;
-            height: 2in;
+            flex: 1 1 150px;
+            max-width: 150px;
             border-radius: 50%;
             overflow: hidden;
+            margin: 10px;
         }
         .top-left-logo img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            object-fit: contain;
+        }
+        .info {
+            flex: 2 1 300px;
+            margin: 10px;
         }
         .name {
-            position: absolute;
-            margin-left: 100px;
-            margin-top: 320px; 
-            font-size: 20px; 
-            font-weight: bold; 
+            font-size: 24px;
+            font-weight: bold;
         }
         .title {
-            position: absolute;
-            margin-left: 100px;
-            margin-top: 350px; 
-            font-size: 16px; 
+            font-size: 18px;
+            margin-top: 10px;
         }
-        .bio-header {
-            position: absolute;
-            top: 120px;
-            left: 400px;
+        .bio-section, .metacells-section, .otherwork-section {
+            margin: 20px 0;
+            padding-left: 0.5in;
+        }
+        .section-header {
             font-size: 24px;
             font-weight: bold;
         }
-        .bio-text {
-            position: absolute;
-            top: 160px;
-            left: 400px;
+        .section-text {
             font-size: 16px;
+            margin-top: 10px;
         }
-        .Metacells-header {
-            position: absolute;
-            top: 250px;
-            left: 400px;
-            font-size: 24px;
-            font-weight: bold;
+        a {
+            color: blue;
+            text-decoration: none;
         }
-        .Metacells-text {
-            position: absolute;
-            top: 290px;
-            left: 400px;
-            font-size: 16px;
-        }
-        .Otherwork-header {
-            position: absolute;
-            top: 380px;
-            left: 400px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .Otherwork-text {
-            position: absolute;
-            top: 420px;
-            left: 400px;
-            font-size: 16px;
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .top-left-logo {
+                margin-bottom: 20px;
+            }
+            .bio-section, .metacells-section, .otherwork-section {
+                padding-left: 0.5in;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="top-left-logo">
-        <img src="images/headshot.jpeg" alt="Logo" />
+    <div class="container">
+        <div class="top-left-logo">
+            <img src="images/headshot.jpeg" alt="Kevin O'Leary">
+        </div>
+        <div class="info">
+            <div class="name">Kevin Sean O'Leary</div>
+            <div class="title">
+                MD/PhD Candidate at Albert<br>Einstein College of Medicine
+                <br><br>
+                LinkedIn: <a href="https://www.linkedin.com/in/ksoleary/">@ksoleary</a><br>
+                X: <a href="https://x.com/kevinolearyy">@kevinolearyy</a>
+            </div>
+        </div>
     </div>
-    <div class="name">
-        Kevin Sean O'Leary
+    <div class="bio-section">
+        <div class="section-header">Bio</div>
+        <div class="section-text">
+            Hi! I'm a 4th year MD/PhD candidate in the Department of Genetics at Albert Einstein College of Medicine. I work in the lab<br> of Dr. Deyou Zheng. Feel free to email me (kevin.oleary@einsteinmed.edu) if you have any questions about our work!
+        </div>
     </div>
-    <div class="title">
-        MD/PhD Candidate at Albert<br>Einstein College of Medicine
-        <br><br>
-        LinkedIn: <a href="https://www.linkedin.com/in/ksoleary/">@ksoleary</a><br>
-        X: <a href="https://x.com/kevinolearyy">@kevinolearyy</a>
+    <div class="metacells-section">
+        <div class="section-header">Metacells</div>
+        <div class="section-text">
+            O’Leary, K., Zheng, D. Metacell-based differential expression analysis identifies cell type specific temporal gene response <br>programs in COVID-19 patient PBMCs. npj Syst Biol Appl 10, 36 (2024). <a href="https://doi.org/10.1038/s41540-024-00364-2">https://doi.org/10.1038/s41540-024-00364-2</a>
+        </div>
     </div>
-    <div class="bio-header">
-        Bio
-    </div>
-    <div class="bio-text">
-        Hi! I'm a 4th year MD/PhD candidate in the Department of Genetics at Albert Einstein College of Medicine. I work in the lab<br> of Dr. Deyou Zheng. Feel free to email me (kevin.oleary@einsteinmed.edu) if you have any questions about our work!
-        
-    </div>
-    <div class="Metacells-header">
-        Metacells
-    </div>
-    <div class="Metacells-text">
-        O’Leary, K., Zheng, D. Metacell-based differential expression analysis identifies cell type specific temporal gene response <br>programs in COVID-19 patient PBMCs. npj Syst Biol Appl 10, 36 (2024). <a href="https://doi.org/10.1038/s41540-024-00364-2">https://doi.org/10.1038/s41540-024-00364-2</a>
-        
-    </div>
-    <div class="Otherwork-header">
-        Other Work
-    </div>
-    <div class="Otherwork-text">
-        Aswad, D.W., O’Leary, K.S. & Williams, K. Characterization of a polyclonal antibody that is highly selective for the D-isoAsp-25<br> variant of mammalian histone H2B. Amino Acids 55, 541–544 (2023). <a href="https://doi.org/10.1007/s00726-023-03242-z">https://doi.org/10.1007/s00726-023-03242-z</a>
-        <br><br>
-        Pham, J., Tran, A., O'Leary, K. S., Youm, J., Tran, D. K., & Chen, J. W. (2022). Neurosurgery Lectures Benefit from a Flipped<br> Class Approach. World neurosurgery, 164, e481–e491. <a href="https://doi.org/10.1016/j.wneu.2022.04.134">https://doi.org/10.1016/j.wneu.2022.04.134</a>
+    <div class="otherwork-section">
+        <div class="section-header">Other Work</div>
+        <div class="section-text">
+            Aswad, D.W., O’Leary, K.S. & Williams, K. Characterization of a polyclonal antibody that is highly selective for the D-isoAsp-25<br> variant of mammalian histone H2B. Amino Acids 55, 541–544 (2023). <a href="https://doi.org/10.1007/s00726-023-03242-z">https://doi.org/10.1007/s00726-023-03242-z</a>
+            <br><br>
+            Pham, J., Tran, A., O'Leary, K. S., Youm, J., Tran, D. K., & Chen, J. W. (2022). Neurosurgery Lectures Benefit from a Flipped<br> Class Approach. World neurosurgery, 164, e481–e491. <a href="https://doi.org/10.1016/j.wneu.2022.04.134">https://doi.org/10.1016/j.wneu.2022.04.134</a>
+        </div>
     </div>
 </body>
 </html>
