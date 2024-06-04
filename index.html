@@ -15,29 +15,38 @@
             flex-wrap: wrap;
             padding: 20px;
         }
+        .left-section {
+            flex: 1 1 200px;
+            max-width: 200px;
+            margin-right: 20px;
+        }
         .top-left-logo {
-            flex: 1 1 150px;
-            max-width: 150px;
+            width: 100%;
+            height: auto;
             border-radius: 50%;
             overflow: hidden;
-            margin: 10px;
+            margin-bottom: 20px;
         }
         .top-left-logo img {
             width: 100%;
-            height: auto;
-            object-fit: contain;
-        }
-        .info {
-            flex: 2 1 300px;
-            margin: 10px;
+            height: 100%;
+            object-fit: cover;
         }
         .name {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
+            margin-bottom: 10px;
         }
         .title {
-            font-size: 18px;
-            margin-top: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .title a {
+            color: blue;
+            text-decoration: none;
+        }
+        .right-section {
+            flex: 3 1 600px;
         }
         .bio-section, .metacells-section, .otherwork-section {
             margin: 20px 0;
@@ -46,35 +55,38 @@
         .section-header {
             font-size: 24px;
             font-weight: bold;
+            margin-bottom: 10px;
         }
         .section-text {
             font-size: 16px;
-            margin-top: 10px;
-        }
-        a {
-            color: blue;
-            text-decoration: none;
         }
         @media (max-width: 600px) {
             .container {
                 flex-direction: column;
                 align-items: center;
             }
-            .top-left-logo {
+            .left-section {
+                max-width: 100%;
+                text-align: center;
                 margin-bottom: 20px;
             }
+            .right-section {
+                max-width: 100%;
+                padding-left: 0;
+            }
             .bio-section, .metacells-section, .otherwork-section {
-                padding-left: 0.5in;
+                padding-left: 0;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="top-left-logo">
-            <img src="images/headshot.jpeg" alt="Kevin O'Leary">
-        </div>
-        <div class="info">
+        <div class="left-section">
+            <div class="top-left-logo">
+                <img src="images/headshot.jpeg" alt="Kevin O'Leary">
+            </div>
             <div class="name">Kevin Sean O'Leary</div>
             <div class="title">
                 MD/PhD Candidate at Albert<br>Einstein College of Medicine
@@ -83,25 +95,27 @@
                 X: <a href="https://x.com/kevinolearyy">@kevinolearyy</a>
             </div>
         </div>
-    </div>
-    <div class="bio-section">
-        <div class="section-header">Bio</div>
-        <div class="section-text">
-            Hi! I'm a 4th year MD/PhD candidate in the Department of Genetics at Albert Einstein College of Medicine. I work in the lab<br> of Dr. Deyou Zheng. Feel free to email me (kevin.oleary@einsteinmed.edu) if you have any questions about our work!
-        </div>
-    </div>
-    <div class="metacells-section">
-        <div class="section-header">Metacells</div>
-        <div class="section-text">
-            O’Leary, K., Zheng, D. Metacell-based differential expression analysis identifies cell type specific temporal gene response <br>programs in COVID-19 patient PBMCs. npj Syst Biol Appl 10, 36 (2024). <a href="https://doi.org/10.1038/s41540-024-00364-2">https://doi.org/10.1038/s41540-024-00364-2</a>
-        </div>
-    </div>
-    <div class="otherwork-section">
-        <div class="section-header">Other Work</div>
-        <div class="section-text">
-            Aswad, D.W., O’Leary, K.S. & Williams, K. Characterization of a polyclonal antibody that is highly selective for the D-isoAsp-25<br> variant of mammalian histone H2B. Amino Acids 55, 541–544 (2023). <a href="https://doi.org/10.1007/s00726-023-03242-z">https://doi.org/10.1007/s00726-023-03242-z</a>
-            <br><br>
-            Pham, J., Tran, A., O'Leary, K. S., Youm, J., Tran, D. K., & Chen, J. W. (2022). Neurosurgery Lectures Benefit from a Flipped<br> Class Approach. World neurosurgery, 164, e481–e491. <a href="https://doi.org/10.1016/j.wneu.2022.04.134">https://doi.org/10.1016/j.wneu.2022.04.134</a>
+        <div class="right-section">
+            <div class="bio-section">
+                <div class="section-header">Bio</div>
+                <div class="section-text">
+                    Hi! I'm a 4th year MD/PhD candidate in the Department of Genetics at Albert Einstein College of Medicine. I work in the lab<br> of Dr. Deyou Zheng. Feel free to email me (kevin.oleary@einsteinmed.edu) if you have any questions about our work!
+                </div>
+            </div>
+            <div class="metacells-section">
+                <div class="section-header">Metacells</div>
+                <div class="section-text">
+                    O’Leary, K., Zheng, D. Metacell-based differential expression analysis identifies cell type specific temporal gene response <br>programs in COVID-19 patient PBMCs. npj Syst Biol Appl 10, 36 (2024). <a href="https://doi.org/10.1038/s41540-024-00364-2">https://doi.org/10.1038/s41540-024-00364-2</a>
+                </div>
+            </div>
+            <div class="otherwork-section">
+                <div class="section-header">Other Work</div>
+                <div class="section-text">
+                    Aswad, D.W., O’Leary, K.S. & Williams, K. Characterization of a polyclonal antibody that is highly selective for the D-isoAsp-25<br> variant of mammalian histone H2B. Amino Acids 55, 541–544 (2023). <a href="https://doi.org/10.1007/s00726-023-03242-z">https://doi.org/10.1007/s00726-023-03242-z</a>
+                    <br><br>
+                    Pham, J., Tran, A., O'Leary, K. S., Youm, J., Tran, D. K., & Chen, J. W. (2022). Neurosurgery Lectures Benefit from a Flipped<br> Class Approach. World neurosurgery, 164, e481–e491. <a href="https://doi.org/10.1016/j.wneu.2022.04.134">https://doi.org/10.1016/j.wneu.2022.04.134</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
